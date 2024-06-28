@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
+require("dotenv").config()
 
-const connection_string =
-  "mongodb+srv://pp728776:patel123@piyushcluster.6ukxmxu.mongodb.net/?retryWrites=true&w=majority&appName=PiyushCluster"
-console.log("conncection String", connection_string)
+const connection_string = process.env.CONNECTION_STRING
+console.log("conncection String", process.env.CONNECTION_STRING)
 const connectDB = async () => {
   try {
     const connection = mongoose.connection
